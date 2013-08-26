@@ -1,0 +1,50 @@
+# global list of scores
+global_scores = ScoreList.new # some shit you'll make
+
+# example piece of input
+input = gets
+parser = InputParser.new(input) # parse it
+scorer = Scorer.new(parser.teams) # score it
+
+scorer.get_scores.each do |team_name, score|
+	# foreach score, add to the team's record
+	global_scores.add_score(team_name, score)
+end
+
+# dump output
+
+global_scores.dump_output
+
+
+class ScoreList
+	def initialize
+		@scores = {}
+	end
+
+	def add_score(team_name, score)
+		# ... adds a single score for a team name
+	end
+
+	def dump_output
+		# sort the scores, output
+	end
+end
+
+describe ScoreList do
+	describe "#dump_output" do
+
+	end
+
+	describe "#add_score" do
+
+	end
+end
+
+##### dump the scores
+# look up how to sort a hash
+
+global_scores.sort ...
+
+
+# sort it by the score
+# output each team in order, formatted
