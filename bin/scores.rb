@@ -8,6 +8,7 @@ puts "(a)dd score (v)iew results e(x)it"
 scores = ScoreList.new
 
 input = gets
+
 case input
 when 'a'
 	print "Please enter the score > "
