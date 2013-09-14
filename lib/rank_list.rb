@@ -4,8 +4,10 @@ class RankList
 	end
 
 	def build_ranks
-		@team_name_and_ranks.sort_by do |team_name, team_rank|
-			[-Integer(team_rank), team_name] 
+		@team_names_and_ranks
+
+		@team_names_and_ranks.sort_by do |team_name, team_rank|
+			-Integer(team_rank)			
 		end
 	end
 
